@@ -3,11 +3,12 @@ from persona import Persona
 class Docente(Persona):
     codigo_docente = ''
     facultad = ''
-    
-    def __init__(self, nombre, ap_paterno, ap_materno, dni, codigo, facultad, año_ingreso):
+    año_ingreso2= 234
+    def __init__(self, nombre, ap_paterno, ap_materno, dni, codigo, facultad):
         super().__init__(nombre, ap_paterno, ap_materno, dni)
         self.codigo_docente = codigo
         self.facultad = facultad
+    
 
     def get_codigo(self):
         return self.codigo_docente

@@ -3,7 +3,7 @@ class Curso:
     nombre = ''
     notas = []
 
-    def _init_(self, codigo, nombre):
+    def __init__(self, codigo, nombre):
         self.codigo = codigo
         self.nombre = nombre
 

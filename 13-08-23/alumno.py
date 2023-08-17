@@ -11,7 +11,7 @@ class Alumno(Persona):
         self.codigo = codigo
         self.facultad = facultad
         self.año_ingreso = año_ingreso
-
+        self.cursos_inscritos = []  #Inicializando la lista de alumnos inscritos
     def get_codigo(self):
         return self.codigo
 
@@ -46,19 +46,24 @@ class Alumno(Persona):
             Persona.set_dni = int(input("ingre el dni de la persona"))
             
     """
-
+#AGREGAR CURSO Y REMOVER CURSO
     def agregar_curso(self, curso):
-            self.Curso.append(curso)
+        self.cursos_inscritos.append(curso)
+    
     def remover_curso(self, curso_eliminar):
-            
-            for curso in self.Curso:
-                if curso_eliminar.get_codigo() ==  curso.get_codigo():
-                    self.Curso.remove(curso)
-                else:
-                    print('No se encuentra registrado el curso a eliminar')
-                   
+        for curso in self.cursos_inscritos:
+            if curso_eliminar.get_codigo() == curso.get_codigo():
+                self.cursos_inscritos.remove(curso)
+                print(f"Curso {curso.get_nombre()} removido correctamente.")
+                return
+        print('No se encuentra registrado el curso a eliminar.')
 
-# Mostramos los cursos en la lista
+
+    #eSTA ES UNA FUNCIÓN PARA MOSTRAR LOS CURSOS INSCRITOS
+    def mostrar_cursos_inscritos(self):
+            return [curso.get_nombre() for curso in self.cursos_inscritos]
+
+# Mostramos los cursos en la lista PARA  DEMOSTRACIÓN
 for curso in Curso.curso:
     print(curso.nombre)
 """Curso = Curso

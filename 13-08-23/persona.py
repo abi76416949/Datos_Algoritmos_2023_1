@@ -8,7 +8,7 @@ class Persona:
     fecha_nac = ""
 
     # constructo
-    def _init_(self, nombre, ap_paterno, ap_materno, dni):
+    def __init__(self, nombre, ap_paterno, ap_materno, dni):
         self.nombre = nombre
         self.ap_paterno = ap_paterno
         self.ap_materno = ap_materno
