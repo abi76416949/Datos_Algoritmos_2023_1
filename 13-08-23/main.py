@@ -30,3 +30,24 @@ lista_curso.append(curso4)
  
 
 input("Presiona Enter para salir...")
+
+band = 0
+for curso in lista_curso:
+    if (band < 2):
+        curso.asignar_docente(docente1)
+    else:
+        curso.asignar_docente(docente2)
+    band += 1
+
+for curso in lista_curso:
+    docente = curso.mostrar_docente()
+    print(docente.imprimir())
+    
+
+for alumno in lista_alumnos:
+    for curso in lista_curso:
+        alumno.agregar_curso(curso)
+
+#mostrar los cursos asignados a alumno 
+#ingresar notas al alumno
+#calcular el promedio
