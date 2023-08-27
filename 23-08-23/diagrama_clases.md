@@ -1,4 +1,4 @@
-#   Diagrama de clases
+#   DIAGRAMA DE CLASES
 ``` mermaid
 classDiagram
     Persona <|-- Docente:Herencia
@@ -6,6 +6,7 @@ classDiagram
     Docente <-- Curso:Aciociativa
     
     class Persona{
+      
       -private int id
       -private string nombre
       -private string apellido
@@ -65,12 +66,13 @@ classDiagram
     }
 
     class Main{
+        +int opcion
         +ingresar_alumno(alumno)
         +ingresar_docentes(docentes)
-        +ingresar_cursos(cursos)
+        +ingresar_cursos(curso)
         +Curso.ingresar_notas()
         +operaciones()
         +guardar()
-        +imprimir()    
+        +imprimir(codigo_alumno)    
         
         }
